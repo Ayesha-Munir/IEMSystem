@@ -1,0 +1,42 @@
+﻿@model IEnumerable<IEM.Business.Models.UserModel>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1>Users</h1>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>See Income</th>
+            <th>See Expenditure</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) 
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.ActionLink("Incomes", "Index", "Income", new { userID = item.UserID}, new { @class= "link-danger"})
+                </td>
+                <td>
+                    @Html.ActionLink("Expenditure", "Index", "Expenditure", new { userID = item.UserID}, new { @class= "link-danger"})
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.UserID}, new { @class= "link-danger"}) |
+                    @Html.ActionLink("Details", "Details", new {  id = item.UserID}, new { @class= "link-danger"}) |
+                    @Html.ActionLink("Delete", "Delete", new {  id = item.UserID}, new { @class= "link-danger"})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

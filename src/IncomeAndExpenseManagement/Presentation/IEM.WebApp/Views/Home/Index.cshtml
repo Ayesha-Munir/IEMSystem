@@ -1,0 +1,95 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="~/css/homestyles.css" rel="stylesheet" />
+
+<!-- Heading Row-->
+<div class="row gx-4 gx-lg-5 align-items-center my-5">
+    <div class="col-lg-5">
+        <h1 class="font-weight-light">
+            Track. 
+            Plan. 
+            Succeed.
+        </h1>
+        <p>
+            A Web Based Application That Helps To Track Income & Expenditure...
+            <br />
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        </p>
+        <a class="btn" style="background-color:#FF4F5A; color:white" asp-area="" asp-controller="User" asp-action="SignUp">Get Started!</a>
+    </div>
+    <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" style="height:400px; width:auto; float:right" src="~/media/home1.jpg" alt="..." /></div>
+</div>
+<br />
+<!-- Content Row-->
+<section class="pt-4">
+    <!-- Page Features-->
+    <div class="row gx-lg-5">
+
+        <!--User Card-->
+        <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                    <div class="feature bg-gradient text-white rounded-3 mb-4 mt-n4" style="background-color:#FF4F5A">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-vcard" viewBox="0 0 16 16">
+                            <path d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z" />
+                            <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z" />
+                        </svg>
+                    </div>
+                    <p class="mb-0">Manages User Profiles<br />Add, Update, Remove, View 
+                        <a asp-area="" asp-controller="User" asp-action="Index" class="link-danger fw-bold">Users
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Income Card-->
+        <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                    <div class="feature bg-gradient text-white rounded-3 mb-4 mt-n4" style="background-color:#FF4F5A">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
+                            <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                            <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z" />
+                        </svg>
+                    </div>
+                    <p class="mb-0">Manages User's Incomes<br />Add, Update, Remove, View 
+                        <a asp-area="" asp-controller="Income" asp-action="Index" class="link-danger fw-bold">Incomes
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Expenditure Card-->
+        <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                    <div class="feature bg-gradient text-white rounded-3 mb-4 mt-n4" style="background-color:#FF4F5A">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
+                            <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+                        </svg>
+                    </div>
+                    <p class="mb-0">
+                        Manages User's Expenses<br />Add, Update, Remove, View
+                        <a asp-area="" asp-controller="Expenditure" asp-action="Index" class="link-danger fw-bold">Expenses
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br />

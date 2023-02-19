@@ -1,0 +1,38 @@
+﻿@model IEnumerable<IEM.Business.Models.IncomeModel>
+
+@{
+    ViewData["Title"] = "Income";
+}
+
+<h1>Incomes</h1>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) 
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.IncomeID, userId=item.UserID/* id=item.PrimaryKey */ }, new { @class= "link-danger"}) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IncomeID, userId=item.UserID/* id=item.PrimaryKey */ }, new { @class= "link-danger"}) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IncomeID, userId=item.UserID/* id=item.PrimaryKey */ }, new { @class= "link-danger"})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <a class="btn" style="float:right; background-color:#FF4F5A; color:white" asp-action="Create" asp-route-userID="@ViewBag.UserID">Add Income</a>
+</p>
+
